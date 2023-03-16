@@ -14,6 +14,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::get('/dummy-data', function () {
+    $data = [
+        [
+            'name' => 'John Doe',
+            'email' => 'john.doe@example.com',
+            'age' => 30,
+        ],
+        [
+            'name' => 'Jane Smith',
+            'email' => 'jane.smith@example.com',
+            'age' => 25,
+        ],
+        [
+            'name' => 'Bob Johnson',
+            'email' => 'bob.johnson@example.com',
+            'age' => 35,
+        ],
+    ];
+    return response()->json($data);
 });
