@@ -8,7 +8,7 @@ function App() {
     fetch(`${apiUrl}/dummy-data`)
       .then((response) => response.json())
       .then((data) => setUsers(data));
-  }, []);
+  }, [apiUrl]);
 
   return (
     <div>
