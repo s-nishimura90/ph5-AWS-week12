@@ -4,7 +4,7 @@ on:
     branches:
       - main
 env:
-  ROLE_TO_ASSUME: arn:aws:iam::207095571838:role/GithubActionsRole
+  ROLE_TO_ASSUME: arn:aws:iam::169870649113:role/GitHubActions
   FRONT_BACKET_NAME: ph5aws-s-nishimura-web
   CLOUDFRONT_ID: E1CCPRPVU0U90
 jobs:
