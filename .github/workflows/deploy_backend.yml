@@ -81,5 +81,5 @@ jobs:
         with:
           task-definition: ${{ steps.task-def-app.outputs.task-definition }}
           service: ${{ env.SERVICE_NAME }}
-          cluster: ${{ env.SERVICE_NAME }}
+          cluster: ph5-aws
           wait-for-service-stability: true
