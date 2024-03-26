@@ -4,7 +4,7 @@ on:
     branches:
       - feature/deploy_test
 env:
-  SERVICE_NAME: ph5aws
+  SERVICE_NAME: ph5aws-ecs-service-1-1
   ROLE_TO_ASSUME: arn:aws:iam::169870649113:role/GitHubActions
 jobs:
   deploy:
@@ -65,7 +65,7 @@ jobs:
         uses: aws-actions/amazon-ecs-render-task-definition@v1
         with:
           task-definition: ./task_definition.json
-          container-name: ${{ env.SERVICE_NAME }}-web
+          container-name: ${{ env.SERVICE_NAME }}-backend
           image: ${{ steps.build-web.outputs.image }}
 
       - name: Fill in the new image ID App
