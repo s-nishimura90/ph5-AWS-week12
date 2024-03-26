@@ -47,7 +47,7 @@ jobs:
         id: build-app
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-          ECR_REPOSITORY: ${{ env.SERVICE_NAME }}-phpfpm
+          ECR_REPOSITORY: ${{ env.SERVICE_NAME }}-backend
           DOCKER_FILE: ./docker/php/Dockerfile.aws
         run: |
           docker build -t ${ECR_REPOSITORY} . -f ${DOCKER_FILE}
@@ -73,7 +73,7 @@ jobs:
         uses: aws-actions/amazon-ecs-render-task-definition@v1
         with:
           task-definition: ${{ steps.task-def-web.outputs.task-definition }}
-          container-name: ${{ env.SERVICE_NAME }}-phpfpm
+          container-name: ${{ env.SERVICE_NAME }}-backend
           image: ${{ steps.build-app.outputs.image }}
 
       - name: Deploy Amazon ECS
