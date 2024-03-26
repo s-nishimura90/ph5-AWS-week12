@@ -4,7 +4,7 @@ on:
     branches:
       - feature/deploy_test
 env:
-  SERVICE_NAME: ph5aws-ecs-service-1-1
+  SERVICE_NAME: ph5aws
   ROLE_TO_ASSUME: arn:aws:iam::169870649113:role/GitHubActions
 jobs:
   deploy:
