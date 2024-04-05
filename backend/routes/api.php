@@ -15,22 +15,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/dummy-data', function () {
-    $data = [
-        [
-            'name' => 'oo',
-            'email' => 'Michael Andrew Fox@example.com',
-            'age' => 30,
-        ],
-        [
-            'name' => 'Jane Smith',
-            'email' => 'jane.smith@example.com',
-            'age' => 25,
-        ],
-        [
-            'name' => 'Bob Johnson',
-            'email' => 'bob.johnson@example.com',
-            'age' => 35,
-        ],
-    ];
-    return response()->json($data);
+    return User::all();
 });
