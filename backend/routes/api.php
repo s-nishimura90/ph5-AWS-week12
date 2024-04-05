@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/dummy-data', function () {
+Route::get('/users', function () {
+    Log::info('ログ出力テスト');  // ここを追加
     return User::all();
 });
