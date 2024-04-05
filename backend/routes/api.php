@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/dummy-data', function () {
     $data = [
         [
-            'name' => 'Michael Andrew Fox',
+            'name' => 'oo',
             'email' => 'Michael Andrew Fox@example.com',
             'age' => 30,
         ],
