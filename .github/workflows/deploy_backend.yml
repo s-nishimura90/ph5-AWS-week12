@@ -80,6 +80,6 @@ jobs:
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:
           task-definition: ${{ steps.task-def-app.outputs.task-definition }}
-          service: ph5aws-ecs-a
+          service: ph5aws-ecs-c
           cluster: ph5aws
           wait-for-service-stability: true
